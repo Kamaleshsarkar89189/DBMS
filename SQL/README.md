@@ -249,3 +249,70 @@ YEAR          -- year in 4 digits format ranging from 1901 to 2155        YEAR
     Renames columns or expressions in query results.
     Example: SELECT first_name AS "First Name", last_name AS "Last Name" FROM
     employees;
+
+#   ● ORDER BY: 
+    The ORDER BY clause allows you to sort the result set of a query based on one or more colums.
+
+    Basic Syntax: 
+        - The ORDER BY clause is used after the SELECT statement to sort query resutls.
+        - Syntax: SELECT column1, column1, column2 FROM table_name ORDER BY column1
+        [ASC|DESC];
+
+    Ascending and Desecending Order:
+
+        - By default, the ORDER BY clause sorts in ascending order(smallest to largest).
+        - You can explecitily specify descending order using the DESC keyword.
+        - Example: SELECT product_name, price FROM products ORDER BY price DESC;
+
+    Sorting by Multiple Columns :
+        - You can sort by multiple columns by listing them sequentially in the ORDER BY clause.
+        - Rows are first sorted based on the first column, and for rows with equal values,
+        subsequent columns are used for further sorting.
+        - Example: SELECT first_name, last_name FROM employees ORDER By last_name,
+        first_name;
+
+    Sorting by Expressions:
+
+    - It's possible to sort by calculated expressions, not just colummn values.
+    - Example: SELECT product_name, price, price * 1.1 AS discounted_price FROM products ORDER By discounted_price;
+
+    Sorting by NULL Values:
+        - By default, NULL values are considered the smallest in ascending order and the largest in descending order.
+        - You can control the sorting behaviour of NULL values using the NULLS FIRST or NULLS LAST options.
+        - Example: SELECT column_name FROM table_name ORDER BY column_name NULLS LAST,
+    
+    Sorting by Position:
+        - Instead of specifying column names, you can sort by column positions in the ORDER BY clause.
+        - Example: SELECT product_name, price FROM products ORDER BY 2 DESC, 1 ASC;
+
+    * GROUP BY
+
+        The GROUP BY clause in SQL is used to group rows from a table based on one or more
+        columns.
+
+        Syntax:
+- The GROUP BY clause follows the SELECT statement and is used to group rows
+based on specified columns.
+- Syntax: SELECT column1, aggregate_function(column2) FROM table_name
+GROUP BY column1;
+- Aggregation Functions:
+○ Aggregation functions (e.g., COUNT, SUM, AVG, MAX, MIN) are often used
+with GROUP BY to calculate values for each group.
+○ Example: SELECT department, AVG(salary) FROM employees GROUP BY
+department;
+- Grouping by Multiple Columns:
+○ You can group by multiple columns by listing them in the GROUP BY clause.
+○ This creates a hierarchical grouping based on the specified columns.
+○ Example: SELECT department, gender, AVG(salary) FROM employees
+GROUP BY department, gender;
+- HAVING Clause:
+○ The HAVING clause is used with GROUP BY to filter groups based on
+aggregate function results.
+○ It's similar to the WHERE clause but operates on grouped data.
+○ Example: SELECT department, AVG(salary) FROM employees GROUP BY
+department HAVING AVG(salary) > 50000;
+- Combining GROUP BY and ORDER BY:
+○ You can use both GROUP BY and ORDER BY in the same query to control
+the order of grouped results.
+○ Example: SELECT department, COUNT(*) FROM employees GROUP BY
+department ORDER BY COUNT(*) DESC;
