@@ -23,7 +23,7 @@
 
 -- Table related Queries
 
-Alter(to chnage the schema)
+Alter(to change the schema)
 
 ADD Column
 
