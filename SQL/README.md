@@ -419,3 +419,56 @@ Example: Revoking the SELECT privilege on the "Employees" table from the "Analys
     They allow you to group related changes into transactions, and in the event of errors, either commit those changes or roll them back to maintain data integrity.
     TCL commands are used in combination with Data Manipulation Language (DML) and other
     SQL commands to ensure that the database remains in a reliable state despite unforeseen errors or issues.
+
+
+## JOINS
+
+    In a DBMS, a join is an operation that combines rows from two or more tables based on a related column between them.
+    Joins are used to retrieve data from multiple tables by linking them together using a common key or column.
+    Types of Joins:
+
+1. Inner Join
+2. Outer Join
+3. Cross Join
+4. Self Join
+
+1) Inner Join
+    An inner join combines data from two or more tables based on a specified condition, known as the join condition.
+    The result of an inner join includes only the rows where the join condition is met in all participating tables.
+    It essentially filters out non-matching rows and returns only the rows that have matching values in both tables.
+    Syntax:
+    SELECT columns
+    FROM table1
+    INNER JOIN table2
+    ON table1.column = table2.column;
+Here:
+● columns refers to the specific columns you want to retrieve from the tables.
+● table1 and table2 are the names of the tables you are joining.
+● column is the common column used to match rows between the tables.
+● The ON clause specifies the join condition, where you define how the tables are
+related.
+
+Example: Consider two tables: Customers and Orders.
+
+Customers Table:
+CustomerID CustomerName
+    1       Alice
+    2       Bob
+    3       Carol
+
+Orders Table:
+    OrderID     CustomerID      Product
+    101             1           Laptop
+    102             3           Smartphone
+    103             2           Headphones
+
+Inner Join Query:
+    SELECT Customers.CustomerName, Orders.Product
+    FROM Customers
+    INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+
+Result:
+    CustomerName        Product
+    Alice               Laptop
+    Bob                 Headphones
+    Carol               Smartphone
