@@ -1,0 +1,148 @@
+Here are short, viva-ready answers on all important DBMS keys. Keep them crisp and to the point 👇
+
+1. Super Key
+
+A super key is a set of one or more attributes that uniquely identifies a record in a table.
+
+2. Candidate Key
+
+A candidate key is a minimal super key; no attribute can be removed and still uniquely identify a record.
+
+3. Primary Key
+
+A primary key is the candidate key chosen to uniquely identify each row in a table.
+It cannot be NULL or duplicated.
+
+4. Alternate Key
+
+An alternate key is a candidate key that is not selected as the primary key.
+
+5. Foreign Key
+
+A foreign key is an attribute in one table that refers to the primary key of another table, used to maintain referential integrity.
+
+6. Composite Key
+
+A composite key is a key formed using two or more attributes together to uniquely identify a record.
+
+7. Unique Key
+
+A unique key ensures that all values in a column are unique, but it can allow NULL values.
+
+8. Natural Key
+
+A natural key is a key formed from real-world data, like Email ID or Aadhaar number.
+
+9. Surrogate Key
+
+A surrogate key is an artificially created key, usually an auto-increment ID, with no business meaning.
+
+10. Secondary Key
+
+A secondary key is used for searching and retrieval, not for unique identification.
+
+11. Partial Key
+
+A partial key uniquely identifies weak entities along with a foreign key of a strong entity.
+
+12. Primary Key vs Foreign Key (1-line)
+
+Primary key uniquely identifies records in a table, while foreign key creates a relationship between tables.
+
+13. Candidate Key vs Primary Key
+
+A table can have multiple candidate keys, but only one primary key.
+
+14. Can a table have multiple primary keys?
+
+No, a table can have only one primary key, but it may be composite.
+
+15. Can a foreign key be NULL?
+
+Yes, unless restricted by constraints.
+
+Here is a simple, short, and viva-ready explanation of DDL, DML, and other SQL commands with easy examples 👇
+
+1. DDL (Data Definition Language)
+
+Used to create and modify database structure.
+
+Commands: CREATE, ALTER, DROP, TRUNCATE
+
+2. DML (Data Manipulation Language)
+
+Used to insert, update, and delete data.
+
+Commands: INSERT, UPDATE, DELETE
+
+3. DQL (Data Query Language)
+
+Used to fetch data from database.
+
+Command: SELECT
+
+4. DCL (Data Control Language)
+
+Used to give or remove permissions.
+
+Commands: GRANT, REVOKE
+
+5. TCL (Transaction Control Language)
+
+Used to manage transactions.
+
+Commands: COMMIT, ROLLBACK, SAVEPOINT
+
+One-Line Difference (for Viva)
+
+DDL → Structure
+
+DML → Data
+
+DQL → Query
+
+DCL → Permission
+
+TCL → Transaction
+
+What is JOIN?
+
+A JOIN is used to combine rows from two or more tables based on a related column.
+
+1. INNER JOIN
+
+Returns only matching records from both tables.
+
+2. LEFT JOIN (LEFT OUTER JOIN)
+
+Returns all records from left table and matching records from right table.
+
+3. RIGHT JOIN (RIGHT OUTER JOIN)
+
+Returns all records from right table and matching records from left table.
+
+4. FULL JOIN (FULL OUTER JOIN)
+
+Returns all records from both tables, matched or not.
+
+5. CROSS JOIN
+
+Returns all possible combinations of rows.
+
+6. SELF JOIN
+
+A table joined with itself.
+
+One-Line Summary (Viva Tip)
+
+INNER → matching rows
+
+LEFT → all left + matching right
+
+RIGHT → all right + matching left
+
+FULL → all records
+
+CROSS → combinations
+
+SELF → same table
